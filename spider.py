@@ -47,7 +47,7 @@ class Spider:
 		html_string = ''
 		try:
 			response = urlopen(page_url) #return byte data
-			if response.getheader('Content-Type') = 'text/html':
+			if 'text/html' in response.getheader('Content-Type') :
 				html_bytes = response.read() #1s and 0s
 				html_string = html_bytes.decode("utf-8") #convert to string te binary web data
 
