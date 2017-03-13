@@ -16,6 +16,21 @@ NUMBER_OF_THREADS = 8
 queue = Queue()
 Spider(PROJECT_NAME, HOMEPAGE, DOMAIN_NAME)
 
+#create worker threads (will die when main exits)
+
+def create_workers():
+	for _ in range(NUMBER_OF_THREADS): # _ dont care of value 
+		t = threading.Thread(target=work)
+		t.daemon = True #die whenever main exit
+		t.start()
+
+
+# DO the next job in the queue
+def work():
+	while True:
+		url = queue.get()
+		Spider.crawl_page(threading.current_thread().name,url)
+		queue.task.done()
 
 #each queued link is a new job
 def create_jobs():
@@ -35,7 +50,8 @@ def crawl():
 		create_jobs()
 
 
-
+create_workers()
+crawl()
 
 
 
