@@ -22,4 +22,4 @@ def get_sub_domain_name(url):
 		return ''
 
 
-print(get_domain_name('https://thenewboston.com/index.php'))
+#print(get_domain_name('https://thenewboston.com/index.php'))

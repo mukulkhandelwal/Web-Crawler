@@ -62,11 +62,11 @@ class Spider:
 	@staticmethod
 	def add_links_to_queue(links):
 		for url in links:
-			if url in Spider.queue:  
+			if (url in Spider.queue):  
 				continue
 			if url in Spider.crawled:
 				continue
-			if Spider.domain_name not in url: # so that not add the other links like in youtube it cant add links from youtube
+			if Spider.domain_name != get_domain_name(url): # so that not add the other links like in youtube it cant add links from youtube
 				continue
 
 			Spider.queue.add(url)
