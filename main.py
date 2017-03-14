@@ -6,8 +6,8 @@ from domain import *
 from general import *
 
 
-PROJECT_NAME = 'thenewboston'
-HOMEPAGE = 'https://thenewboston.com/'
+PROJECT_NAME = '' #put the name of project like google
+HOMEPAGE = '' #put url of the project just like https://google.com
 DOMAIN_NAME = get_domain_name(HOMEPAGE)
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'

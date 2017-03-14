@@ -29,7 +29,6 @@ def write_file(path, data):
 		#f.close()
 
 
-#create_data_files('thenewboston', 'https://thenewboston.com/')
 
 #Add data onto an existing file
 
