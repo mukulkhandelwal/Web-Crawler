@@ -1,6 +1,7 @@
 from urllib.request import urlopen #connect webpages in python
 from link_finder import LinkFinder
 from general import *
+from domain import *
 
 class Spider:
 
@@ -53,6 +54,7 @@ class Spider:
 
 			finder = LinkFinder(Spider.base_url,page_url)
 			finder.feed(html_string)
+			#print(html_string)
 		except:
 			print("Error : can not crawled page")
 			return set()

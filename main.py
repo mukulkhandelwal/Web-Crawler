@@ -30,7 +30,7 @@ def work():
 	while True:
 		url = queue.get()
 		Spider.crawl_page(threading.current_thread().name,url)
-		queue.task.done()
+		queue.task_done()
 
 #each queued link is a new job
 def create_jobs():
@@ -51,7 +51,7 @@ def crawl():
 
 
 create_workers()
-crawl()
+crawl()	
 
 
 

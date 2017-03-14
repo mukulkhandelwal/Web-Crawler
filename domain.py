@@ -16,7 +16,7 @@ def get_domain_name(url):
 
 def get_sub_domain_name(url):
 	try:
-		print(url)
+		#print(url)
 		return urlparse(url).netloc 
 	except:
 		return ''
